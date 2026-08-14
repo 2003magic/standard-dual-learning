@@ -1,4 +1,4 @@
-# The `ptc-dual-learning` agent preset: the `standard` preset plus a dual-layer
+# The `standard-dual-learning` agent preset: the `standard` preset plus a dual-layer
 # learning loop distilled from github.com/2003magic/agent-dual-learning.
 #
 # Layer 1 (prevention): the persona and the bundled `dual-learning` plugin inject

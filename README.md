@@ -1,4 +1,4 @@
-# ptc-dual-learning（标准模式 + 双层学习）
+# standard-dual-learning（标准模式 + 双层学习）
 
 **DSH 自定义 Agent 预设**：在**标准模式**基础上，内置从
 [agent-dual-learning](https://github.com/2003magic/agent-dual-learning) 提炼的**双层学习机制**。
@@ -19,12 +19,12 @@
 
 1. 打开 DeepSeek Harness Web 界面，点输入框上方的模式按钮（如 “标准模式”）。
 2. 预设文件就位后（见方式 B 第 1 步），**标准 + 双层学习** 会自动出现在菜单里，选中即可（新会话生效）。
-3. 可选：在 设置 中把默认预设改为 `ptc-dual-learning`。
+3. 可选：在 设置 中把默认预设改为 `standard-dual-learning`。
 
 ### 方式 B：终端一行命令（推荐）
 
 ```bash
-git clone https://github.com/2003magic/ptc-dual-learning ~/.dsh/.agent-presets/ptc-dual-learning
+git clone https://github.com/2003magic/standard-dual-learning ~/.dsh/.agent-presets/standard-dual-learning
 ```
 
 `~/.dsh/.agent-presets/` 是用户预设目录（`$DSH_HOME` 存在时用 `$DSH_HOME/.agent-presets`）。
@@ -35,7 +35,7 @@ git clone https://github.com/2003magic/ptc-dual-learning ~/.dsh/.agent-presets/p
 ## 目录结构
 
 ```text
-ptc-dual-learning/
+standard-dual-learning/
 ├── agent.cordis.yml              # 预设组合：standard 全部行 + 学习循环行
 ├── preset.yml                    # 显示名与描述
 ├── dual-learning.mjs             # 零依赖双层学习插件（随预设分发）

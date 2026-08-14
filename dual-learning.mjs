@@ -1,4 +1,4 @@
-// dual-learning.mjs — zero-dependency Cordis plugin for the ptc-dual-learning
+// dual-learning.mjs — zero-dependency Cordis plugin for the standard-dual-learning
 // DSH agent preset. Distilled from github.com/2003magic/agent-dual-learning.
 //
 // Layer 1 (prevention): on agent/session-start, inject a "learn before you
