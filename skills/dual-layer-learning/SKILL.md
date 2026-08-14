@@ -49,10 +49,3 @@ injects the notice automatically at N = 3).
 
 - Re-read recent lessons whenever a task touches a fingerprint you have seen
   before. Learning compounds; retries don't.
-
-## In PTC (Code Mode)
-
-You run in Code Mode: batch multi-step operations into one run_code TypeScript
-program — but keep experiments small and decisive: one experiment per learning
-cycle, not five variants at once. web_search, read, and grep are all reachable
-inside run_code.

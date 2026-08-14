@@ -1,5 +1,5 @@
-# The `ptc-dual-learning` agent preset: the `code` preset (PTC / Code Mode)
-# plus a dual-layer learning loop distilled from github.com/2003magic/agent-dual-learning.
+# The `ptc-dual-learning` agent preset: the `standard` preset plus a dual-layer
+# learning loop distilled from github.com/2003magic/agent-dual-learning.
 #
 # Layer 1 (prevention): the persona and the bundled `dual-learning` plugin inject
 # a "learn before you build" directive at session start.
@@ -8,11 +8,11 @@
 # `repeat-tool-reminder` additionally breaks identical-call loops. Events persist
 # to a JSONL knowledge store in the workspace.
 #
-# Everything else is the `code` preset unchanged. The registry itself stays on
-# the host plane — the agent loop's scheduler and the API proxy's presenters are
-# its consumers — so what this preset owns is the PRESENTATION of that registry
-# for this agent alone. Native sessions run beside this one in the same process,
-# each seeing its own catalog.
+# Everything else is the `standard` preset unchanged: one tool call per action,
+# with full observation between steps. The registry itself stays on the host
+# plane, so this preset contributes tools and prompt sections for this agent
+# alone. Native sessions run beside this one in the same process, each seeing
+# its own catalog.
 #
 # This file is an AGENT-PLANE composition. It is mounted under one agent's
 # scope context, so every tool and prompt section it registers belongs to that
@@ -36,7 +36,7 @@
   name: '@deepseek-ai/dsh-persona'
   config:
     text: |-
-      You are a coding agent powered by the {{model}} model, running on the DeepSeek Harness in PTC (Code Mode): you compose multi-step operations as one TypeScript program executed by run_code, reaching every declared tool from inside the program. Your working directory is {{cwd}}.
+      You are a coding agent powered by the {{model}} model. Your working directory is {{cwd}}.
 
       You operate a dual-layer learning loop.
 
@@ -291,13 +291,3 @@
   config:
     fetch: false
     searchTimeoutMs: 60000
-
-# ── presentation ────────────────────────────────────────────────────────────
-
-# Code Mode for this agent alone. The row waits for the host's `codeRuntime`
-# rather than assuming it: a deployment that composes no TypeScript runtime
-# fails this preset at mount, naming this id, instead of at the first request.
-- id: tool-presentation
-  name: '@deepseek-ai/dsh-agent-tool-presentation'
-  config:
-    mode: code
