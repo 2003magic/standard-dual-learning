@@ -41,7 +41,13 @@ ptc-dual-learning/
 ├── dual-learning.mjs             # 零依赖双层学习插件（随预设分发）
 └── skills/
     ├── dual-layer-learning/      # 双层学习完整协议
-    └── learn-before-retry/       # “失败后先学再试”速查协议
+    ├── learn-before-retry/       # “失败后先学再试”速查协议
+    └── dsh-preset-authoring/     # DSH 预设创作速查手册（复制 PTC + 丢 skill 即可，含踩坑清单）
+```
+
+三个技能也都能独立安装为全局技能（所有会话可用）：
+```bash
+mkdir -p ~/.agents/skills && cp -R skills/dual-layer-learning skills/learn-before-retry skills/dsh-preset-authoring ~/.agents/skills/
 ```
 
 两个技能通过 `skill-filesystem.customSkillDirs` 随预设挂载，模型会话里直接可见、可按需加载。
