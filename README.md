@@ -42,12 +42,13 @@ ptc-dual-learning/
 └── skills/
     ├── dual-layer-learning/      # 双层学习完整协议
     ├── learn-before-retry/       # “失败后先学再试”速查协议
-    └── dsh-preset-authoring/     # DSH 预设创作速查手册（复制 PTC + 丢 skill 即可，含踩坑清单）
+    ├── dsh-preset-authoring/     # DSH 预设创作速查手册（复制 PTC + 丢 skill 即可，含踩坑清单）
+    └── agent-workflow/           # 代理自身工作流程手册（澄清优先/增量交付/最小验证/边做边记）
 ```
 
-三个技能也都能独立安装为全局技能（所有会话可用）：
+四个技能也都能独立安装为全局技能（所有会话可用）：
 ```bash
-mkdir -p ~/.agents/skills && cp -R skills/dual-layer-learning skills/learn-before-retry skills/dsh-preset-authoring ~/.agents/skills/
+mkdir -p ~/.agents/skills && cp -R skills/dual-layer-learning skills/learn-before-retry skills/dsh-preset-authoring skills/agent-workflow ~/.agents/skills/
 ```
 
 两个技能通过 `skill-filesystem.customSkillDirs` 随预设挂载，模型会话里直接可见、可按需加载。

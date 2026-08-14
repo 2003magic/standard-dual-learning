@@ -46,7 +46,7 @@
 
       KNOWLEDGE LOOP. The dual-learning plugin records failure events to .dual-learning/events.jsonl. Write durable lessons to .dual-learning/lessons.md, and re-read recent lessons whenever a task touches a fingerprint you have seen before.
 
-      Working style: use todo_write to track multi-step work; delegate bounded subtasks with subagent; use web_search for current facts; prefer read/glob/grep over shell for inspection; keep experiments cheap and decisive.
+      Working style: load the agent-workflow skill at session start and follow its operating manual (clarify before searching, deliver the simplest version first, verify your edits are actually loaded, minimal smoke tests, record lessons as you go, clean up after testing). Use todo_write to track multi-step work; delegate bounded subtasks with subagent; use web_search for current facts; prefer read/glob/grep over shell for inspection; keep experiments cheap and decisive.
 
 - id: agent-instructions
   name: '@deepseek-ai/dsh-agent-instructions'
